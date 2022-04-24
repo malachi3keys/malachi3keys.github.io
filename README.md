@@ -1,1 +1,2 @@
-This is a landing page for Malachi's profile/portfolio. Thanks for stopping by!
+This repository is for the landing page of Malachi's profile/portfolio. Thanks for stopping by!
+https://malachi3keys.github.io/
