@@ -43,7 +43,8 @@ a:hover {
 }
 
 p {
-    line-height: 1.75;
+    line-height: 2;
+    font-size: 1.1rem;
 }
 
 /* Nav bar */
@@ -57,6 +58,7 @@ p {
 #navbar {
     --navbar-height: 64px;
     position: fixed;
+    z-index: 1;
     height: var(--navbar-height);
     background-color: var(--navbar-bg-color);
     left: 0;
@@ -198,8 +200,13 @@ p {
 /* Heading */
 .title-container {
     background-color: #3A9188;
-    padding: 100px  0;
+}
+
+.cloud-box {
     position: relative;
+    padding: 214px 0 130px; /* 164px 0 100px */
+    width: 600px;
+    margin: auto;
 }
 
 .uwu {
@@ -219,14 +226,14 @@ p {
 
 .top-cloud {
     position: absolute;
-    right: 12rem; /*200px*/
-    top: 2.7rem;/*45px*/
+    right: 15px; 
+    top: 159px; /* 109px */
 }
 
 .bottom-cloud {
     position: absolute;
-    left: 12.5rem; /*200px*/
-    top: 12.5rem; /*200px*/
+    left: 50px; 
+    top: 314px; /* 264px */
 }
 
 
@@ -248,11 +255,12 @@ p {
 
 .pfp {
     width: 100%;
+    min-width: 200px;
     max-width: 250px;
     margin: 3%;
 }
 
-.blurb {/* fix width when screen is smaller! */
+.blurb {
     width: 60%;
     margin: auto;
 }
@@ -270,25 +278,25 @@ p {
 
 .about-container {
     display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+    align-items: center; 
     padding: 3% 0;
     text-align: left;
 }
 
 .about-labels {
-    font-size: 1.3rem;
+    font-size: 1.35rem;
     margin-bottom: 0;
 }
 
 .about-col-img {
-    margin: 0 2%;
-    text-align: center;
+    margin: auto 2%;
     flex: 1;
+    display: flex;
+    justify-content: center;
 }
 
 .about-col-text {
-    margin: 0 2%;
+    margin: auto 2%;
     padding: 0 2%;
     flex: 3;
 }
@@ -296,9 +304,8 @@ p {
 .about-img {
     border-radius: 100%;
     width: 100%;
-    max-width: 250px;
-    /* height: 150px;
-    width:  150px; */
+    min-width: 150px;
+    max-width: 175px;
 }
 
 
@@ -340,7 +347,7 @@ p {
 .footer-container {
     background-color: #3A9188;
     color: #062925;
-    padding: 3% 0;
+    padding: 1% 0;
 }
 
 .footer-link {
@@ -349,7 +356,7 @@ p {
 }
 
 .copyright {
-    font-size: 0.8rem;
+    font-size: 1rem;
     margin: 1% 0;
 }
 
@@ -393,15 +400,43 @@ p {
 
 
 /* Media Queries */
-@media (max-width: 1000px) {
+@media (max-width: 1028px) {
     .blurb {
-        width: 80%;
+        width: 100%;
+    }
+    
+    .about-col-text {
+        flex: 4;
+        margin: 2%;
     }
 
 }
 
+@media (max-width: 850px) {
+    .about-container {
+        flex-flow: column;
+        text-align: center;
+    }
+
+    .about-col-img {
+        margin-top: 2%;
+    }
+
+    .about-labels {
+        font-size: 1.4rem;
+    }
+
+    #guitar {
+        order: 1;
+    }
+    
+    #hobbies {
+        order: 2;
+    }
+}
+
 /* navbar media  */
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1028px) {
     #navbar-toggle,
     #navbar-toggle[aria-expanded='true'] {
       display: none;
@@ -425,12 +460,11 @@ p {
         height: 100%;
     }
     
-    /* .about-col-text {
-        flex: 2;
-    } */
-
-
     .about-container {
         padding: 3% 7%;
+    }
+
+    .contact-btn {
+        margin: 2% 3%;
     }
 }
