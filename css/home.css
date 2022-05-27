@@ -444,6 +444,10 @@ p {
     .profile {
         padding: 10%;
     }
+
+    .bottom-cloud {
+        left: 25px;
+    }
 }
 
 /* navbar media  */
