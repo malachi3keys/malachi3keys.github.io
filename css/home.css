@@ -1,7 +1,7 @@
 /* General Properties */
 body {
     background-color: #044A42;
-    color: antiquewhite;
+    color: white;
     font-family: 'Merriweather', serif;
     font-size: 1rem;
     margin: 0;
@@ -16,7 +16,7 @@ h1 {
 }
 
 h2 {
-    color: antiquewhite;
+    color: white;
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -34,24 +34,24 @@ hr {
 }
 
 a {
-    color: antiquewhite; 
+    color: white; 
     text-decoration: none;
 }
 
 a:hover {
-    color: antiquewhite;
+    color: white;
 }
 
 p {
-    line-height: 2;
+    line-height: 1.8;
     font-size: 1.1rem;
 }
 
 /* Nav bar */
 :root {
     --navbar-bg-color: #062925; /*hsl(0, 0%, 15%)*/
-    --navbar-text-color: antiquewhite;
-    --navbar-text-color-focus: #faebd7;
+    --navbar-text-color: white;
+    --navbar-text-color-focus: white;
     --navbar-bg-contrast: #044A42;
 }
 
@@ -204,8 +204,8 @@ p {
 
 .cloud-box {
     position: relative;
-    padding: 214px 0 130px; /* 164px 0 100px */
-    width: 600px;
+    padding: 214px 10px 130px; 
+    max-width: 600px;
     margin: auto;
 }
 
@@ -227,13 +227,13 @@ p {
 .top-cloud {
     position: absolute;
     right: 15px; 
-    top: 159px; /* 109px */
+    top: 159px; 
 }
 
 .bottom-cloud {
     position: absolute;
     left: 50px; 
-    top: 314px; /* 264px */
+    top: 314px; 
 }
 
 
@@ -327,7 +327,7 @@ p {
     border: none;
     background-color: #062925;
     border-radius: 25px;
-    color: antiquewhite;
+    color: white;
     cursor: pointer;
     font-family: 'Merriweather', serif;
     font-size: 1rem;
@@ -422,16 +422,27 @@ p {
         margin-top: 2%;
     }
 
-    .about-labels {
-        font-size: 1.4rem;
-    }
-
     #guitar {
         order: 1;
     }
     
     #hobbies {
         order: 2;
+    }
+
+    .about-img {
+        max-width: 150px;
+    }
+}
+
+/* for phone screens */
+@media (max-width: 500px) {
+    p {
+        font-size: 1rem;
+    }
+
+    .profile {
+        padding: 10%;
     }
 }
 
