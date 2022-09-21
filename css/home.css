@@ -49,7 +49,7 @@ p {
 
 /* Nav bar */
 :root {
-    --navbar-bg-color: #062925; /*hsl(0, 0%, 15%)*/
+    --navbar-bg-color: #062925; 
     --navbar-text-color: white;
     --navbar-text-color-focus: white;
     --navbar-bg-contrast: #044A42;
@@ -99,7 +99,6 @@ p {
     justify-content: space-evenly;
     padding: 0.4rem 0.8rem;
     border-radius: 5px;
-    /* width: 100%; */
     min-width: 5rem; /*based on longest link size */
     margin: auto;
 }
@@ -173,9 +172,9 @@ p {
 }
 
 #navbar-toggle[aria-expanded='true'] + #navbar-menu {
-    /* background-color: rgba(0, 0, 0, 0.4); */
     opacity: 1;
     visibility: visible;
+    /* background-color: rgba(0, 0, 0, 0.4); */
 }
 
 .navbar-links {
@@ -185,7 +184,6 @@ p {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* left: 0; make the menu on right side instead of center */
     right: 0;
     margin: 1%;
     border-radius: 5px;
@@ -214,7 +212,7 @@ p {
     width: 35px;
 }
 
-.myname {
+#myname {
     margin-bottom: 0;
 }
 
@@ -224,13 +222,13 @@ p {
     margin: 0;
 }
 
-.top-cloud {
+#top-cloud {
     position: absolute;
     right: 15px; 
     top: 159px; 
 }
 
-.bottom-cloud {
+#bottom-cloud {
     position: absolute;
     left: 50px; 
     top: 314px; 
@@ -253,7 +251,7 @@ p {
     margin: auto;
 }
 
-.pfp {
+#pfp {
     width: 100%;
     min-width: 200px;
     max-width: 250px;
@@ -288,24 +286,30 @@ p {
     margin-bottom: 0;
 }
 
-.about-col-img {
+.img-div {
     margin: auto 2%;
     flex: 1;
-    display: flex;
-    justify-content: center;
 }
 
-.about-col-text {
+.text-div {
     margin: auto 2%;
     padding: 0 2%;
     flex: 3;
 }
 
-.about-img {
+#coding-img {
+    border-radius: 37px;
+    width: 100%;
+    min-width: 225px;
+    max-width: 250px;  
+    margin-top: 1.5rem;
+}
+
+#hobbies-img {
     border-radius: 100%;
     width: 100%;
-    min-width: 150px;
-    max-width: 175px;
+    min-width: 175px;
+    max-width: 200px;
 }
 
 
@@ -315,7 +319,15 @@ p {
     margin-bottom: 2%;
 }
 
-.collect-btn {
+.contactsub {
+    color: #a5ffdf;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.btn-div {
     display: flex;
     justify-content: center;
     width: 50%;
@@ -334,7 +346,6 @@ p {
     margin: 2% 5%;
     padding: 12px 15px;
     transition-duration: 500;
-    /* border: 2px solid #3A9188; */
 }
 
 .contact-btn:hover {
@@ -350,14 +361,103 @@ p {
     padding: 1% 0;
 }
 
-.footer-link {
-    margin: 20px 10px;
-    text-decoration: none;   
-}
-
 .copyright {
     font-size: 1rem;
     margin: 1% 0;
+}
+
+
+/* Media Queries */
+@media (max-width: 1028px) {
+    .blurb {
+        width: 100%;
+    }
+    
+    .text-div {
+        flex: 4;
+        margin: 2%;
+    }
+
+}
+
+@media (max-width: 850px) {
+    .about-container {
+        flex-flow: column;
+    }
+
+    .about-labels {
+        text-align: center;
+    }
+
+    .img-div {
+        margin-top: 2%;
+    }
+
+    #guitar {
+        order: 1;
+    }
+    
+    #hobbies {
+        order: 2;
+    }
+
+    #hobbies-img {
+        max-width: 175px;
+    }
+
+    #coding-img {
+        max-width: 225px;
+        margin-top: 0;
+    }
+}
+
+/* for phone screens */
+@media (max-width: 500px) {
+    p {
+        font-size: 1rem;
+    }
+
+    .profile {
+        padding: 10%;
+    }
+
+    #bottom-cloud {
+        left: 25px;
+    }
+}
+
+/* navbar media & larger screens */
+@media screen and (min-width: 1028px) {
+    #navbar-toggle,
+    #navbar-toggle[aria-expanded='true'] {
+      display: none;
+    }   
+
+    #navbar-menu, #navbar-toggle[aria-expanded='true'] + #navbar-menu {
+        visibility: visible;
+        opacity: 1;
+        position: static;
+        display: block;
+        height: 100%;
+    }
+
+    .navbar-links, #navbar-toggle[aria-expanded='true'] + #navbar-menu .navbar-links {
+        margin: 0;
+        padding: 0;
+        box-shadow: none;
+        position: static;
+        flex-direction: row;
+        width: 100%;
+        height: 100%;
+    }
+    
+    .about-container {
+        padding: 3% 7%;
+    }
+
+    .contact-btn {
+        margin: 2% 3%;
+    }
 }
 
 
@@ -396,90 +496,4 @@ p {
     background-color: #e2a03c;
     height: 50px;
     width: 50px;
-}
-
-
-/* Media Queries */
-@media (max-width: 1028px) {
-    .blurb {
-        width: 100%;
-    }
-    
-    .about-col-text {
-        flex: 4;
-        margin: 2%;
-    }
-
-}
-
-@media (max-width: 850px) {
-    .about-container {
-        flex-flow: column;
-        text-align: center;
-    }
-
-    .about-col-img {
-        margin-top: 2%;
-    }
-
-    #guitar {
-        order: 1;
-    }
-    
-    #hobbies {
-        order: 2;
-    }
-
-    .about-img {
-        max-width: 150px;
-    }
-}
-
-/* for phone screens */
-@media (max-width: 500px) {
-    p {
-        font-size: 1rem;
-    }
-
-    .profile {
-        padding: 10%;
-    }
-
-    .bottom-cloud {
-        left: 25px;
-    }
-}
-
-/* navbar media  */
-@media screen and (min-width: 1028px) {
-    #navbar-toggle,
-    #navbar-toggle[aria-expanded='true'] {
-      display: none;
-    }   
-
-    #navbar-menu, #navbar-toggle[aria-expanded='true'] + #navbar-menu {
-        visibility: visible;
-        opacity: 1;
-        position: static;
-        display: block;
-        height: 100%;
-    }
-
-    .navbar-links, #navbar-toggle[aria-expanded='true'] + #navbar-menu .navbar-links {
-        margin: 0;
-        padding: 0;
-        box-shadow: none;
-        position: static;
-        flex-direction: row;
-        width: 100%;
-        height: 100%;
-    }
-    
-    .about-container {
-        padding: 3% 7%;
-    }
-
-    .contact-btn {
-        margin: 2% 3%;
-    }
 }
