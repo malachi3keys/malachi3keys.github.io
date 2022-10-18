@@ -11,18 +11,19 @@ body {
 h1 {
     color: #062925;
     font-family: 'Aref Ruqaa', serif;
-    font-size: 2.5rem; 
+    font-size: 3.5rem; 
     margin-top: 0;
 }
 
 h2 {
     color: white;
     font-family: 'Montserrat', sans-serif;
+    font-size: 1.75rem;
 }
 
 h3 {
     color: #a5ffdf;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     font-style: italic;
     font-family: 'Montserrat', sans-serif;
 }
@@ -63,7 +64,6 @@ p {
     background-color: var(--navbar-bg-color);
     left: 0;
     right: 0;
-    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15); */
 }
 
 .navbar-container {
@@ -174,7 +174,6 @@ p {
 #navbar-toggle[aria-expanded='true'] + #navbar-menu {
     opacity: 1;
     visibility: visible;
-    /* background-color: rgba(0, 0, 0, 0.4); */
 }
 
 .navbar-links {
@@ -187,7 +186,6 @@ p {
     right: 0;
     margin: 1%;
     border-radius: 5px;
-    /* box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); */
 }
 
 #navbar-toggle[aria-expanded='true'] + #navbar-menu .navbar-links {
@@ -217,7 +215,7 @@ p {
 }
 
 .subheading {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     color: #044A42;
     margin: 0;
 }
@@ -231,7 +229,7 @@ p {
 #bottom-cloud {
     position: absolute;
     left: 50px; 
-    top: 314px; 
+    top: 330px; 
 }
 
 
@@ -282,13 +280,13 @@ p {
 }
 
 .about-labels {
-    font-size: 1.35rem;
     margin-bottom: 0;
 }
 
 .img-div {
     margin: auto 2%;
     flex: 1;
+    text-align: center;
 }
 
 .text-div {
@@ -301,20 +299,24 @@ p {
     border-radius: 37px;
     width: 100%;
     min-width: 225px;
-    max-width: 250px;  
+    max-width: 275px;  
     margin-top: 1.5rem;
 }
 
 #hobbies-img {
-    border-radius: 100%;
+    border-radius: 50%;
     width: 100%;
     min-width: 175px;
-    max-width: 200px;
+    max-width: 225px;
 }
 
 /* Projects */
 .project-div {
-    padding: 10% 15%;
+    padding: 7% 15%;
+}
+
+.link-div {
+    margin: 4% 0;
 }
 
 .card-holder {
@@ -322,21 +324,23 @@ p {
     gap: 20px;
     grid-template-columns: repeat(2, minmax(300px, 1fr));
     justify-items: center;
+    align-items: end;
 }
 .card {
     max-width: 400px;
-    padding: 10%;
+    padding: 20px 10px;
 }
 
 .card-img {
     width: 100%;
+    border-radius: 10px;
 }
 
 .card-text {
     text-align: left;
 }
 
-.card-text > h3 {
+.card-titles {
     margin-bottom: 0;
 }
 
@@ -364,7 +368,7 @@ p {
     justify-content: center;
     width: 50%;
     margin: auto;
-    margin-top: 3%;
+    margin-top: 2%;
 }
 
 .contact-btn {
@@ -433,11 +437,11 @@ p {
     }
 
     #hobbies-img {
-        max-width: 175px;
+        max-width: 200px;
     }
 
     #coding-img {
-        max-width: 225px;
+        max-width: 250px;
         margin-top: 0;
     }
     
@@ -497,42 +501,4 @@ p {
     hr {
         width: 5%;
     }
-}
-
-
-/* Color Test Cubes */
-.dark0 {
-    background-color: #402218;
-    height: 50px;
-    width: 50px;
-}
-
-.dark1 {
-    background-color: #062925;
-    height: 50px;
-    width: 50px;
-}
-
-.dark2 {
-    background-color: #044A42;
-    height: 50px;
-    width: 50px;
-} 
-
-.dark3 {
-    background-color: #3A9188;
-    height: 50px;
-    width: 50px;
-}
-
-.dark4 {
-    background-color: #B8E1DD;
-    height: 50px;
-    width: 50px;
-}
-
-.dark5 {
-    background-color: #e2a03c;
-    height: 50px;
-    width: 50px;
 }
