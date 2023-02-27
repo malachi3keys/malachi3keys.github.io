@@ -1,15 +1,30 @@
 /* General Properties */
+:root {
+    --darkgreen: #062925; 
+    --green: #044a42; 
+    --darkcyan: #3a9188; 
+    --mediumgreen: #062925; 
+    --lightgreen: #c5e7e4; 
+    --lightgreen2: #b8e1dd;
+    --navbar-bg-color: var(--darkgreen); 
+    --navbar-text-color: white;
+    --navbar-text-color-focus: white;
+    --navbar-bg-contrast: var(--green);
+}
+
+
 body {
-    background-color: #044A42;
+    background-color: var(--green);
     color: white;
-    font-family: 'Merriweather', serif;
+    font-family: 'Inter', sans-serif;
     font-size: 1rem;
+    font-weight: 400;
     margin: 0;
     text-align: center;
 }
 
 h1 {
-    color: #062925;
+    color: var(--darkgreen);
     font-family: 'Aref Ruqaa', serif;
     font-size: 3.5rem; 
     margin-top: 0;
@@ -19,18 +34,20 @@ h2 {
     color: white;
     font-family: 'Montserrat', sans-serif;
     font-size: 1.75rem;
+    font-weight: 700;
 }
 
 h3 {
-    color: #a5ffdf;
+    color: #c5e7e4;
     font-size: 1.5rem;
     font-style: italic;
     font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
 }
 
 hr {
     border-style: none;
-    border-top: 10px dotted sandybrown;
+    border-top: 10px dotted #f4a460;
     width: 8%;
 }
 
@@ -44,18 +61,12 @@ a:hover {
 }
 
 p {
-    line-height: 1.8;
-    font-size: 1.1rem;
+    line-height: 1.5;
+    font-size: 1.2rem;
+    font-weight: 400;
 }
 
 /* Nav bar */
-:root {
-    --navbar-bg-color: #062925; 
-    --navbar-text-color: white;
-    --navbar-text-color-focus: white;
-    --navbar-bg-contrast: #044A42;
-}
-
 #navbar {
     --navbar-height: 64px;
     position: fixed;
@@ -195,7 +206,7 @@ p {
 
 /* Heading */
 .title-container {
-    background-color: #3A9188;
+    background-color: var(--darkcyan);
 }
 
 .cloud-box {
@@ -216,7 +227,7 @@ p {
 
 .subheading {
     font-size: 1.3rem;
-    color: #044A42;
+    color: var(--green);
     margin: 0;
 }
 
@@ -232,6 +243,19 @@ p {
     top: 330px; 
 }
 
+/* Mountain range */
+.spacer {
+    aspect-ratio: 960/300;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.mountains {
+    margin-top: -100px;
+    background-image: url('../images/green_waves.svg');
+}
 
 /* Profile */
 .profile{
@@ -239,7 +263,7 @@ p {
 }
 
 .welcome {
-    color: #a5ffdf;
+    color: var(--lightgreen);
 }
 
 #pfp-div {
@@ -250,6 +274,8 @@ p {
 }
 
 #pfp {
+    border:solid 10px var(--darkcyan);
+    border-radius: 50%;
     width: 100%;
     min-width: 200px;
     max-width: 250px;
@@ -262,7 +288,7 @@ p {
 }
 
 .green {
-    color: #a5ffdf;
+    color: var(--lightgreen);
     text-decoration: underline;
 }
 
@@ -275,18 +301,17 @@ p {
 .about-container {
     display: flex;
     align-items: center; 
-    padding: 3% 0;
+    margin-bottom: 30px;
     text-align: left;
 }
 
 .about-labels {
-    margin-bottom: 0;
+    margin: 0;
 }
 
 .img-div {
     margin: auto 2%;
     flex: 1;
-    text-align: center;
 }
 
 .text-div {
@@ -296,11 +321,11 @@ p {
 }
 
 #coding-img {
-    border-radius: 37px;
+    border-radius: 10px;
     width: 100%;
     min-width: 225px;
-    max-width: 275px;  
-    margin-top: 1.5rem;
+    max-width: 300px;  
+    margin-top: 10%;
 }
 
 #hobbies-img {
@@ -316,7 +341,7 @@ p {
 }
 
 .link-div {
-    margin: 4% 0;
+    margin: 40px 0;
 }
 
 .card-holder {
@@ -356,10 +381,10 @@ p {
 }
 
 .contactsub {
-    color: #a5ffdf;
+    color: var(--lightgreen);
     font-family: 'Montserrat', sans-serif;
     font-size: 1.25rem;
-    font-weight: bold;
+    font-weight: 500;
     margin: 0;
 }
 
@@ -373,32 +398,33 @@ p {
 
 .contact-btn {
     border: none;
-    background-color: #062925;
+    background-color: var(--darkgreen);
     border-radius: 25px;
     color: white;
     cursor: pointer;
-    font-family: 'Merriweather', serif;
+    font-family: 'Inter', sans-serif;
     font-size: 1rem;
-    margin: 2% 5%;
+    font-weight: 500;
+    margin: 7px 18px;
     padding: 12px 15px;
-    transition-duration: 500;
 }
 
 .contact-btn:hover {
-    background-color: #3A9188;
-    color: #062925;
+    background-color: var(--darkcyan);
+    color: var(--darkgreen);
 }
 
 
 /* Footer */
 .footer-container {
-    background-color: #3A9188;
-    color: #062925;
+    background-color: var(--darkcyan);
+    color: var(--darkgreen);
     padding: 1% 0;
 }
 
 .copyright {
     font-size: 1rem;
+    font-weight: 500;
     margin: 1% 0;
 }
 
@@ -424,10 +450,6 @@ p {
         text-align: center;
     }
 
-    .img-div {
-        margin-top: 2%;
-    }
-
     #guitar {
         order: 1;
     }
@@ -436,15 +458,6 @@ p {
         order: 2;
     }
 
-    #hobbies-img {
-        max-width: 200px;
-    }
-
-    #coding-img {
-        max-width: 250px;
-        margin-top: 0;
-    }
-    
     .card-holder {
         grid-template-columns: repeat(1, minmax(300px, 1fr));
     }
@@ -462,6 +475,10 @@ p {
 
     #bottom-cloud {
         left: 25px;
+    }
+
+    .mountains {
+        margin-top: -75px;
     }
 }
 
@@ -500,5 +517,9 @@ p {
 
     hr {
         width: 5%;
+    }
+
+    .mountains {
+        margin-top: -150px;
     }
 }
