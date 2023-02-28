@@ -274,7 +274,7 @@ p {
 }
 
 #pfp {
-    border:solid 10px var(--darkcyan);
+    border: double 12px var(--darkcyan);
     border-radius: 50%;
     width: 100%;
     min-width: 200px;
@@ -346,13 +346,13 @@ p {
 
 .card-holder {
     display: grid;
-    gap: 20px;
-    grid-template-columns: repeat(2, minmax(300px, 1fr));
+    gap: 50px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 400px));
+    justify-content: center;
     justify-items: center;
-    align-items: end;
+    align-items: baseline;
 }
 .card {
-    max-width: 400px;
     padding: 20px 10px;
 }
 
@@ -391,9 +391,8 @@ p {
 .btn-div {
     display: flex;
     justify-content: center;
-    width: 50%;
     margin: auto;
-    margin-top: 2%;
+    margin-top: 20px;
 }
 
 .contact-btn {
@@ -439,6 +438,10 @@ p {
         flex: 4;
         margin: 2%;
     }
+    
+    .card-holder {
+        gap: 30px;
+    }
 }
 
 @media (max-width: 850px) {
@@ -457,10 +460,6 @@ p {
     #hobbies {
         order: 2;
     }
-
-    .card-holder {
-        grid-template-columns: repeat(1, minmax(300px, 1fr));
-    }
 }
 
 /* for phone screens */
@@ -475,11 +474,16 @@ p {
 
     #bottom-cloud {
         left: 25px;
+        top: 345px;
     }
 
     .mountains {
         margin-top: -75px;
     }
+
+    .card-holder {
+        gap: 25px;
+    }    
 }
 
 /* navbar media & larger screens */
@@ -509,10 +513,6 @@ p {
     
     .about-container {
         padding: 3% 7%;
-    }
-
-    .contact-btn {
-        margin: 2% 3%;
     }
 
     hr {
