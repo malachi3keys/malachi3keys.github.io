@@ -38,7 +38,7 @@ h2 {
 }
 
 h3 {
-    color: #c5e7e4;
+    color: var(--lightgreen);
     font-size: 1.5rem;
     font-style: italic;
     font-family: 'Montserrat', sans-serif;
@@ -301,7 +301,7 @@ p {
 .about-container {
     display: flex;
     align-items: center; 
-    margin-bottom: 30px;
+    margin: 30px auto;
     text-align: left;
 }
 
@@ -321,15 +321,18 @@ p {
 }
 
 #coding-img {
+    border: double 5px var(--darkcyan);
     border-radius: 10px;
+    box-sizing: border-box;
     width: 100%;
     min-width: 225px;
     max-width: 300px;  
-    margin-top: 10%;
 }
 
 #hobbies-img {
+    border: double 5px var(--darkcyan);
     border-radius: 50%;
+    box-sizing: border-box;
     width: 100%;
     min-width: 175px;
     max-width: 225px;
@@ -474,7 +477,7 @@ p {
 
     #bottom-cloud {
         left: 25px;
-        top: 345px;
+        top: 360px;
     }
 
     .mountains {
