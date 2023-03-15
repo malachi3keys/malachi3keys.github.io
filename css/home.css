@@ -288,7 +288,6 @@ p {
 }
 
 .green {
-    color: var(--lightgreen);
     text-decoration: underline;
 }
 
@@ -349,11 +348,11 @@ p {
 
 .card-holder {
     display: grid;
-    gap: 50px;
+    gap: 20px 50px;
     grid-template-columns: repeat(auto-fit, minmax(300px, 400px));
     justify-content: center;
     justify-items: center;
-    align-items: baseline;
+    align-items: end;
 }
 .card {
     padding: 20px 10px;
@@ -366,6 +365,7 @@ p {
 
 .card-text {
     text-align: left;
+    height: 120px
 }
 
 .card-titles {
@@ -443,7 +443,7 @@ p {
     }
     
     .card-holder {
-        gap: 30px;
+        gap: 20px 30px;
     }
 }
 
@@ -485,7 +485,7 @@ p {
     }
 
     .card-holder {
-        gap: 25px;
+        gap: 25px 0;
     }    
 }
 
