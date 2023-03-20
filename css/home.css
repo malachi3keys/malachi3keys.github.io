@@ -12,6 +12,9 @@
     --navbar-bg-contrast: var(--green);
 }
 
+* {
+    box-sizing: border-box;
+}
 
 body {
     background-color: var(--green);
@@ -112,6 +115,10 @@ p {
     border-radius: 5px;
     min-width: 5rem; /*based on longest link size */
     margin: auto;
+}
+
+#about {
+    min-width: 7rem;
 }
 
 .navbar-link:is(:focus, :hover) {
