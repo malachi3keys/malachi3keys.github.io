@@ -1,15 +1,17 @@
 /* General Properties */
 :root {
-    --darkgreen: #062925; 
-    --green: #044a42; 
-    --darkcyan: #3a9188; 
-    --mediumgreen: #062925; 
-    --lightgreen: #c5e7e4; 
-    --lightgreen2: #b8e1dd;
-    --navbar-bg-color: var(--darkgreen); 
+    --main-bg: #ece6d8; 
+    --main-contrast: #7b967a; 
+    --main-text: #6b4028;
+    --main-titles: #340b01; 
+
+    --accent: #4d2d48;
+    --accent-title: #062925; 
+     
+    --navbar-bg-color: var(--main-contrast); 
     --navbar-text-color: white;
     --navbar-text-color-focus: white;
-    --navbar-bg-contrast: var(--green);
+    --navbar-bg-contrast: var(--accent);
 }
 
 * {
@@ -17,8 +19,8 @@
 }
 
 body {
-    background-color: var(--green);
-    color: white;
+    background-color: var(--main-bg);
+    color: var(--main-text);
     font-family: 'Inter', sans-serif;
     font-size: 1rem;
     font-weight: 400;
@@ -27,21 +29,21 @@ body {
 }
 
 h1 {
-    color: var(--darkgreen);
+    color: var(--accent-title);
     font-family: 'Aref Ruqaa', serif;
     font-size: 3.5rem; 
     margin-top: 0;
 }
 
 h2 {
-    color: white;
+    color: var(--main-titles);
     font-family: 'Montserrat', sans-serif;
     font-size: 1.75rem;
     font-weight: 700;
 }
 
 h3 {
-    color: var(--lightgreen);
+    color: var(--main-text);
     font-size: 1.5rem;
     font-style: italic;
     font-family: 'Montserrat', sans-serif;
@@ -213,7 +215,7 @@ p {
 
 /* Heading */
 .title-container {
-    background-color: var(--darkcyan);
+    background-color: var(--main-contrast);
 }
 
 .cloud-box {
@@ -234,7 +236,7 @@ p {
 
 .subheading {
     font-size: 1.3rem;
-    color: var(--green);
+    color: var(--main-bg);
     margin: 0;
 }
 
@@ -270,7 +272,7 @@ p {
 }
 
 .welcome {
-    color: var(--lightgreen);
+    color: var(--main-text);
 }
 
 #pfp-div {
@@ -281,7 +283,7 @@ p {
 }
 
 #pfp {
-    border: double 12px var(--darkcyan);
+    border: double 12px var(--main-contrast);
     border-radius: 50%;
     width: 100%;
     min-width: 200px;
@@ -327,7 +329,7 @@ p {
 }
 
 #coding-img {
-    border: double 5px var(--darkcyan);
+    border: double 5px var(--main-contrast);
     border-radius: 10px;
     box-sizing: border-box;
     width: 100%;
@@ -336,7 +338,7 @@ p {
 }
 
 #hobbies-img {
-    border: double 5px var(--darkcyan);
+    border: double 5px var(--main-contrast);
     border-radius: 50%;
     box-sizing: border-box;
     width: 100%;
@@ -391,7 +393,7 @@ p {
 }
 
 .contactsub {
-    color: var(--lightgreen);
+    color: var(--main-text);
     font-family: 'Montserrat', sans-serif;
     font-size: 1.25rem;
     font-weight: 500;
@@ -407,7 +409,7 @@ p {
 
 .contact-btn {
     border: none;
-    background-color: var(--darkgreen);
+    background-color: var(--main-titles);
     border-radius: 25px;
     color: white;
     cursor: pointer;
@@ -419,15 +421,15 @@ p {
 }
 
 .contact-btn:hover {
-    background-color: var(--darkcyan);
-    color: var(--darkgreen);
+    background-color: var(--main-contrast);
+    color: var(--main-titles);
 }
 
 
 /* Footer */
 .footer-container {
-    background-color: var(--darkcyan);
-    color: var(--darkgreen);
+    background-color: var(--main-contrast);
+    color: var(--main-titles);
     padding: 1% 0;
 }
 
