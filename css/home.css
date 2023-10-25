@@ -1,21 +1,34 @@
 /* General Properties */
 :root {
-    --main-bg: #ece6d8; 
-    --main-contrast: #7b967a; 
-    --main-text: #6b4028;
-    --main-titles: #340b01; 
+    --main-bg: #F8F6F1;
+    --main-bg-dark: #121212; 
+    --main-contrast: #412234; 
+    --main-text: #61331a;
+    --main-text-dark: #eeeeee;
+    --main-titles: #567568; 
 
-    --accent: #4d2d48;
-    --accent-title: #062925; 
+    --accent: #843b62;
+    --accent2: #639182;
+    --accent3: #567568; 
+    --accent4: #28727b;
+    --accent5: #14393E;
+
+    --frame-color: var(--accent2);
      
     --navbar-bg-color: var(--main-contrast); 
-    --navbar-text-color: white;
-    --navbar-text-color-focus: white;
+    --navbar-text-color: #ffffff;
+    --navbar-text-color-focus: #ffffff;
     --navbar-bg-contrast: var(--accent);
 }
 
 * {
     box-sizing: border-box;
+}
+
+[data-theme="dark"] {
+    --main-bg: var(--main-bg-dark);
+    --main-text: var(--main-text-dark);
+    --main-titles: var(--accent2);
 }
 
 body {
@@ -29,7 +42,7 @@ body {
 }
 
 h1 {
-    color: var(--accent-title);
+    color: #ffffff;
     font-family: 'Aref Ruqaa', serif;
     font-size: 3.5rem; 
     margin-top: 0;
@@ -43,7 +56,6 @@ h2 {
 }
 
 h3 {
-    color: var(--main-text);
     font-size: 1.5rem;
     font-style: italic;
     font-family: 'Montserrat', sans-serif;
@@ -57,12 +69,12 @@ hr {
 }
 
 a {
-    color: white; 
+    color: var(--main-titles);
     text-decoration: none;
 }
 
 a:hover {
-    color: white;
+    text-decoration: underline;
 }
 
 p {
@@ -93,39 +105,21 @@ p {
 
 .navbar-item {
     margin: 0.4em;
-    width: 100%;
-}
-
-.home-link, .navbar-link {
-    color: var(--navbar-text-color);
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-}
-
-.home-link{
-    font-size: 1.25rem;
-}
-
-.home-link:is(:focus, :hover) {
-    color: var(--navbar-text-color-focus);
+    min-width: 5rem; /*based on longest link size */
 }
 
 .navbar-link {
-    justify-content: space-evenly;
-    padding: 0.4rem 0.8rem;
     border-radius: 5px;
-    min-width: 5rem; /*based on longest link size */
+    color: var(--navbar-text-color);
     margin: auto;
-}
-
-#about {
-    min-width: 7rem;
+    padding: 0.4rem 0.8rem;
+    text-decoration: none;
 }
 
 .navbar-link:is(:focus, :hover) {
     color: var(--navbar-text-color-focus);
     background-color: var(--navbar-bg-contrast);
+    text-decoration: none;
 }
 
 .navbar-logo {
@@ -203,13 +197,63 @@ p {
     display: flex;
     flex-direction: column;
     align-items: center;
-    right: 0;
+    left: 0;
     margin: 1%;
     border-radius: 5px;
 }
 
 #navbar-toggle[aria-expanded='true'] + #navbar-menu .navbar-links {
     padding: 1rem;
+}
+
+/* Dark Mode */
+.toggle-switch {
+    position: relative;
+    height: 40px;
+    width: 80px;
+}
+  
+input {
+    display: none;
+}
+  
+.slider {
+    background-color: var(--accent);    
+    box-shadow: 0 0 3px 0 #eeeeee;
+    border-radius: 30px;
+    cursor: pointer;
+    height: 100%;
+    width: 100%;
+    transition: 0.3s;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+  
+input:checked + .slider {
+    background-color: var(--accent);
+}
+
+/* slider shape sun */
+.slider::before {
+    /* background-color: #eeeeee; */
+    box-shadow: inset 30px 0 #eeeeee;
+    border-radius: 100%;
+    content: "";
+    height: 25px;
+    width: 25px;
+    transition: 0.3s;
+    position: absolute;
+    left: 8px;
+    top: 8px;
+}
+
+/* slider shape crescent moon */
+input:checked + .slider::before {
+    background-color: var(--accent);
+    border-radius: 50%;
+    box-shadow: inset 8px -3px 0px 0px #eeeeee;
+    transform: translateX(40px);
 }
 
 
@@ -283,7 +327,7 @@ p {
 }
 
 #pfp {
-    border: double 12px var(--main-contrast);
+    border: double 12px var(--frame-color);
     border-radius: 50%;
     width: 100%;
     min-width: 200px;
@@ -329,7 +373,7 @@ p {
 }
 
 #coding-img {
-    border: double 5px var(--main-contrast);
+    border: double 5px var(--frame-color);
     border-radius: 10px;
     box-sizing: border-box;
     width: 100%;
@@ -338,7 +382,7 @@ p {
 }
 
 #hobbies-img {
-    border: double 5px var(--main-contrast);
+    border: double 5px var(--frame-color);
     border-radius: 50%;
     box-sizing: border-box;
     width: 100%;
@@ -378,6 +422,7 @@ p {
 }
 
 .card-titles {
+    color: var(--main-titles);
     margin-bottom: 0;
 }
 
@@ -393,7 +438,6 @@ p {
 }
 
 .contactsub {
-    color: var(--main-text);
     font-family: 'Montserrat', sans-serif;
     font-size: 1.25rem;
     font-weight: 500;
@@ -409,9 +453,9 @@ p {
 
 .contact-btn {
     border: none;
-    background-color: var(--main-titles);
+    background-color: var(--accent);
     border-radius: 25px;
-    color: white;
+    color: #ffffff;
     cursor: pointer;
     font-family: 'Inter', sans-serif;
     font-size: 1rem;
@@ -421,19 +465,20 @@ p {
 }
 
 .contact-btn:hover {
-    background-color: var(--main-contrast);
-    color: var(--main-titles);
+    background-color: var(--accent3);
+    color: #ffffff;
 }
 
 
 /* Footer */
 .footer-container {
     background-color: var(--main-contrast);
-    color: var(--main-titles);
+    color: #ffffff;
     padding: 1% 0;
 }
 
 .copyright {
+    color: #ffffff;
     font-size: 1rem;
     font-weight: 500;
     margin: 1% 0;
