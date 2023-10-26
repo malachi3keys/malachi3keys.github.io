@@ -1,19 +1,22 @@
 /* General Properties */
 :root {
-    --main-bg: #F8F6F1;
-    --main-bg-dark: #121212; 
+    --main-bg: #F8F6F1; 
     --main-contrast: #412234; 
     --main-text: #61331a;
+
+    --main-bg-dark: #121212;
     --main-text-dark: #eeeeee;
-    --main-titles: #567568; 
 
     --accent: #843b62;
-    --accent2: #639182;
-    --accent3: #567568; 
-    --accent4: #28727b;
-    --accent5: #14393E;
-
-    --frame-color: var(--accent2);
+    --accent2: #82BEAB;
+    --accent3: #639182;
+    --accent4: #567568; 
+    --accent5: #3C564D;
+    --accent6: #28727b;
+    --accent7: #14393E;
+    
+    --headers: #3C564D;
+    --frame-color: var(--accent3);
      
     --navbar-bg-color: var(--main-contrast); 
     --navbar-text-color: #ffffff;
@@ -28,7 +31,7 @@
 [data-theme="dark"] {
     --main-bg: var(--main-bg-dark);
     --main-text: var(--main-text-dark);
-    --main-titles: var(--accent2);
+    --headers: var(--accent2);
 }
 
 body {
@@ -49,7 +52,7 @@ h1 {
 }
 
 h2 {
-    color: var(--main-titles);
+    color: var(--headers);
     font-family: 'Montserrat', sans-serif;
     font-size: 1.75rem;
     font-weight: 700;
@@ -69,7 +72,7 @@ hr {
 }
 
 a {
-    color: var(--main-titles);
+    color: var(--headers);
     text-decoration: none;
 }
 
@@ -219,7 +222,7 @@ input {
   
 .slider {
     background-color: var(--accent);    
-    box-shadow: 0 0 3px 0 #eeeeee;
+    box-shadow: 0 0 2px 0 #eeeeee;
     border-radius: 30px;
     cursor: pointer;
     height: 100%;
@@ -237,7 +240,7 @@ input:checked + .slider {
 /* slider shape sun */
 .slider::before {
     /* background-color: #eeeeee; */
-    box-shadow: inset 30px 0 #eeeeee;
+    box-shadow: inset 30px 0 #ffffff;
     border-radius: 100%;
     content: "";
     height: 25px;
@@ -252,7 +255,7 @@ input:checked + .slider {
 input:checked + .slider::before {
     background-color: var(--accent);
     border-radius: 50%;
-    box-shadow: inset 8px -3px 0px 0px #eeeeee;
+    box-shadow: inset 8px -3px 0px 0px #ffffff;
     transform: translateX(40px);
 }
 
@@ -422,7 +425,7 @@ input:checked + .slider::before {
 }
 
 .card-titles {
-    color: var(--main-titles);
+    color: var(--headers);
     margin-bottom: 0;
 }
 
@@ -465,7 +468,7 @@ input:checked + .slider::before {
 }
 
 .contact-btn:hover {
-    background-color: var(--accent3);
+    background-color: var(--accent5);
     color: #ffffff;
 }
 
