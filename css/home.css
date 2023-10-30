@@ -12,8 +12,6 @@
     --accent3: #639182;
     --accent4: #567568; 
     --accent5: #3C564D;
-    --accent6: #28727b;
-    --accent7: #14393E;
     
     --headers: #3C564D;
     --frame-color: var(--accent3);
@@ -45,10 +43,8 @@ body {
 }
 
 h1 {
-    color: #ffffff;
     font-family: 'Aref Ruqaa', serif;
-    font-size: 3.5rem; 
-    margin-top: 0;
+    font-size: 2.25rem; 
 }
 
 h2 {
@@ -212,8 +208,8 @@ p {
 /* Dark Mode */
 .toggle-switch {
     position: relative;
-    height: 40px;
-    width: 80px;
+    height: 30px;
+    width: 64px;
 }
   
 input {
@@ -223,7 +219,7 @@ input {
 .slider {
     background-color: var(--accent);    
     box-shadow: 0 0 2px 0 #eeeeee;
-    border-radius: 30px;
+    border-radius: 20px;
     cursor: pointer;
     height: 100%;
     width: 100%;
@@ -240,80 +236,30 @@ input:checked + .slider {
 /* slider shape sun */
 .slider::before {
     /* background-color: #eeeeee; */
-    box-shadow: inset 30px 0 #ffffff;
+    box-shadow: inset 20px 0 #ffffff;
     border-radius: 100%;
     content: "";
-    height: 25px;
-    width: 25px;
+    height: 18px;
+    width: 18px;
     transition: 0.3s;
     position: absolute;
-    left: 8px;
-    top: 8px;
+    left: 6px;
+    top: 6px;
 }
 
 /* slider shape crescent moon */
 input:checked + .slider::before {
     background-color: var(--accent);
     border-radius: 50%;
-    box-shadow: inset 8px -3px 0px 0px #ffffff;
-    transform: translateX(40px);
+    box-shadow: inset 6px -2px 0px 0px #ffffff;
+    transform: translateX(32px);
 }
 
-
-/* Heading */
-.title-container {
-    background-color: var(--main-contrast);
+.menu-spacer {
+    height: 64px;
 }
 
-.cloud-box {
-    position: relative;
-    padding: 214px 10px 130px; 
-    max-width: 600px;
-    margin: auto;
-}
-
-.uwu {
-    height:35px;
-    width: 35px;
-}
-
-#myname {
-    margin-bottom: 0;
-}
-
-.subheading {
-    font-size: 1.3rem;
-    color: var(--main-bg);
-    margin: 0;
-}
-
-#top-cloud {
-    position: absolute;
-    right: 15px; 
-    top: 159px; 
-}
-
-#bottom-cloud {
-    position: absolute;
-    left: 50px; 
-    top: 330px; 
-}
-
-/* Mountain range */
-.spacer {
-    aspect-ratio: 960/300;
-    width: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.mountains {
-    margin-top: -100px;
-    background-image: url('../images/green_waves.svg');
-}
-
-/* Profile */
+/* Home */
 .profile{
     padding: 10% 15%;
 }
@@ -330,12 +276,14 @@ input:checked + .slider::before {
 }
 
 #pfp {
-    border: double 12px var(--frame-color);
+    border: solid 5px var(--frame-color);
     border-radius: 50%;
+    margin: 3%;
+    outline: 5px solid var(--frame-color);
+    outline-offset: 5px;
     width: 100%;
     min-width: 200px;
     max-width: 250px;
-    margin: 3%;
 }
 
 .blurb {
@@ -376,18 +324,20 @@ input:checked + .slider::before {
 }
 
 #coding-img {
-    border: double 5px var(--frame-color);
+    border: solid 3px var(--frame-color);
     border-radius: 10px;
-    box-sizing: border-box;
+    outline: 3px solid var(--frame-color);
+    outline-offset: 3px;
     width: 100%;
     min-width: 225px;
     max-width: 300px;  
 }
 
 #hobbies-img {
-    border: double 5px var(--frame-color);
+    border: solid 3px var(--frame-color);
     border-radius: 50%;
-    box-sizing: border-box;
+    outline: 3px solid var(--frame-color);
+    outline-offset: 3px;
     width: 100%;
     min-width: 175px;
     max-width: 225px;
@@ -436,7 +386,7 @@ input:checked + .slider::before {
 
 /* Contact Me */
 .contact {
-    padding: 7% 15%;
+    padding: 10% 15%;
     margin-bottom: 2%;
 }
 
