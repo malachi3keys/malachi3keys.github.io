@@ -482,15 +482,6 @@ input:checked + .slider::before {
         padding: 10%;
     }
 
-    #bottom-cloud {
-        left: 25px;
-        top: 360px;
-    }
-
-    .mountains {
-        margin-top: -75px;
-    }
-
     .card-holder {
         gap: 25px 0;
     }    
@@ -528,8 +519,11 @@ input:checked + .slider::before {
     hr {
         width: 5%;
     }
+}
 
-    .mountains {
-        margin-top: -150px;
+/* Need about text to be less stretched out */
+@media screen and (min-width: 1800px) {
+    .about-container {
+        padding: 3% 15%;
     }
 }
