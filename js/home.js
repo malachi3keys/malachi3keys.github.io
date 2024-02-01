@@ -18,7 +18,12 @@ navbarMenu.addEventListener("click", toggleNavbarVisibility);
 // Dark Mode
 const mode = document.querySelector('#mode');
 const main = document.body;
+
 mode.addEventListener("click", toggleDarkMode);
+window.addEventListener('load',() => {
+  if(main.getAttribute('data-theme') === 'light'){
+    mode.checked = false;
+  }});
 
 function toggleDarkMode() { 
   const modeContainer = document.querySelector('.toggle-switch');
